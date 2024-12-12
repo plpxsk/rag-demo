@@ -15,6 +15,15 @@ nally, CoH can help models learn from human feedback, making their outputs more 
 Yao, Y., Chen, M., & Dai, Z. (2023). ReAct: Synergizing Reasoning and Acting for Language Agents. arXiv:2304.12244.
 ```
 
+Timed:
+
+```shell
+(.venv) rag-chain# time python rag.py --q "What's cool about AutoGPT?"  
+AutoGPT is a proof-of-concept project that demonstrates the use of a language model as an autonomous agent. It's cool because it exhibits emergent social behavior, like information diffusion and event coordination, and it uses a set of commands to interact with tools and other agents.
+
+0.79s user 0.16s system 9% cpu 10.443 total
+```
+
 # Install
 
 Install from `requirements.txt`

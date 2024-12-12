@@ -6,3 +6,7 @@ langgraph
 
 # vector DB. alternative: Chroma, pinecone, etc
 langchain-core
+
+# for custom.py only
+unstructured[md]
+python-magic

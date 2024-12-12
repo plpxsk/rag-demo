@@ -19,7 +19,15 @@ from typing_extensions import List, TypedDict
 def main(args):
     load_environment()
 
-    docs = get_context_documents()
+    print("Loading data...")
+    if args.path is not None:
+        from custom import load_custom_docs
+        docs = load_custom_docs(path=args.path, exclude="**/*.png",
+                                sample_size=args.limit)
+    else:
+        docs = get_context_documents()
+
+    print(f"Loaded {len(docs)} docs.")
 
     llm, embeddings = get_llm_embeddings()
     vector_store = get_vector_store(embeddings)
@@ -92,6 +100,16 @@ def build_parser():
         "--q",
         required=True,
         help="Question"
+    )
+    parser.add_argument(
+        "--path",
+        help="Use this local directory as context, instead of default data"
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=0,
+        help="Limit loaded files to this number (int)"
     )
     return parser
 

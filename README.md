@@ -13,6 +13,12 @@ nally, CoH can help models learn from human feedback, making their outputs more 
 
 (.venv) rag-chain# python rag.py --q "Who wrote the paper ReAct?"  
 Yao, Y., Chen, M., & Dai, Z. (2023). ReAct: Synergizing Reasoning and Acting for Language Agents. arXiv:2304.12244.
+
+(.venv) rag-demo# python rag.py --q "What does this demo use?" --path .  
+Loading data...
+Loaded 5 docs.
+
+The demo uses a blog as context data, the Mistral model, and an embedding vector store from langchain-core.
 ```
 
 Timed:
@@ -31,6 +37,12 @@ Install from `requirements.txt`
 # Run
 
 	python rag.py --q "What is your question?"
+
+By default, a blog from internet is used as context.
+
+Pass local files:
+
+	python rag.py --q "What does chapter 8 describe?" --path my/files/here
 
 # References
 

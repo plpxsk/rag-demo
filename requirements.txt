@@ -1,0 +1,8 @@
+beautifulsoup4
+langchain-text-splitters
+langchain-community
+langchain-mistralai
+langgraph
+
+# vector DB. alternative: Chroma, pinecone, etc
+langchain-core
